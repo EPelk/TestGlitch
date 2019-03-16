@@ -44,6 +44,9 @@ public class Vision extends Subsystem {
     //private final SerialPort.Port CAMERA_RIGHT_PORT = SerialPort.Port.kOnboard;
     private final SerialPort.Port CAMERA_RIGHT_PORT = SerialPort.Port.kMXP;
   
+    //line follower implementation
+    
+
     private enum Camera {
       LEFT, RIGHT;
     }
@@ -99,6 +102,8 @@ public class Vision extends Subsystem {
         visionGo = false;
       }
       SmartDashboard.putBoolean("visionGo?", visionGo);
+
+      
       
       collectRawData();
       processData();
